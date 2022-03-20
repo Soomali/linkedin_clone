@@ -7,6 +7,8 @@ class ConversationAppBarPopUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //popUp menüsü icon olarak verdiğimiz widget'a tıklandığı zaman o widget'ın altına itemBuilder
+    //ile tanımlanmış PopUpMenuItem lar'ı build eder.
     return PopupMenuButton<String>(
         padding: EdgeInsets.zero,
         icon: Icon(Icons.more_vert),

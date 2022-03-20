@@ -14,6 +14,7 @@ class _CloneAppBarState extends State<CloneAppBar> {
   var _showSearch = false;
   @override
   Widget build(BuildContext context) {
+    //duruma göre iki appbar'dan birini göstermemizi sağlayan setState metodu.
     return _showSearch
         ? SearchAppBar(onBackpressed: () {
             setState(() {

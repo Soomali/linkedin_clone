@@ -10,6 +10,7 @@ class SearchAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+
     return SliverAppBar(
       pinned: true,
       backgroundColor: Colors.blueGrey.shade900,

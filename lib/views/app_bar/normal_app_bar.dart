@@ -10,7 +10,7 @@ class NormalAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
+    //SliverAppBar'lar normal app bar'lardan daha fazla özelleştirilebilirler.
     return SliverAppBar(
       systemOverlayStyle: SystemUiOverlayStyle(
         // Status bar color
@@ -34,6 +34,7 @@ class NormalAppBar extends StatelessWidget {
           const NormalAppBarPopUp()
         ],
       ),
+      //gezinebileceğimiz tabların içeriği burada belirtiliyor.
       bottom: TabBar(
           labelPadding: EdgeInsets.only(bottom: 12),
           isScrollable: true,

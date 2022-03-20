@@ -83,7 +83,7 @@ class ImageWidget extends StatelessWidget {
           image: DecorationImage(
               image: NetworkImage(user.photoUrl), fit: BoxFit.fill)),
       child: Align(
-          alignment: Alignment(0, -1.01),
+          alignment: const Alignment(0, -1.01),
           child: SizedBox(
             width: size.width * .56,
             child: Material(

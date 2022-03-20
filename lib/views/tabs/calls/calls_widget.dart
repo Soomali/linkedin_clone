@@ -15,7 +15,7 @@ class CallListTile extends StatelessWidget {
         children: [
           Text(
             call.user.name,
-            style: TextStyle(color: Colors.white, fontSize: 17),
+            style: const TextStyle(color: Colors.white, fontSize: 17),
           ),
           Row(
             children: [
@@ -32,12 +32,12 @@ class CallListTile extends StatelessWidget {
         ],
       ),
       trailing: call.callType == CallType.phone
-          ? Icon(
+          ? const Icon(
               Icons.phone,
               color: Colors.green,
               size: 24,
             )
-          : Icon(
+          : const Icon(
               Icons.videocam,
               color: Colors.green,
               size: 24,
