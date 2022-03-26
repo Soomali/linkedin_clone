@@ -1,16 +1,16 @@
-# flutter_app_clone
+# LinkedIn_clone
 
-A new Flutter project.
+    A LinkedIn app clone which is written by IEEE Ege Computer Society Students, for educational and practical purposes.
 
 ## Getting Started
+    
+    This app will contain 4-6 pages depending on the teams choice. Issues will be added to the issue section,
+ select one and start coding :)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Some pages that I have selected are:
+        - Profile page
+        - My Network page 
+        - Notifications page
+        - Main page
+    
+    If you want more screens to be there, open an issue about said screen. 
