@@ -16,6 +16,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.red),
         debugShowCheckedModeBanner: false,
-        home: Center(child: Text('LinkedIn')));
+        home: Center(child: Text('LinkedIn Github example')));
   }
 }
