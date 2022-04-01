@@ -1,4 +1,8 @@
-part of 'main_page.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+part 'custom_avatar.dart';
+part 'search_bar.dart';
 
 class LinkedInAppBar extends StatelessWidget {
   const LinkedInAppBar({Key? key}) : super(key: key);

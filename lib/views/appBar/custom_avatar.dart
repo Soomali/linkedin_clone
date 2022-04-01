@@ -1,4 +1,4 @@
-part of 'main_page.dart';
+part of 'app_bar.dart';
 
 const _photoUrl =
     'https://firebasestorage.googleapis.com/v0/b/pati-1c0a4.appspot.com/o/AnimalPhotos%2FZvykuekSqoZt3580r94Wdq1jrdz2-arKqPB70C4WteNrAHh5K-763000000?alt=media&token=2923c7fe-a6f7-4cbe-a985-a7a1ee352823';
