@@ -1,4 +1,4 @@
-part of 'main_page.dart';
+part of 'app_bar.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);

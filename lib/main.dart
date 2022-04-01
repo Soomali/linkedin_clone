@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             primaryColor: LinkedInDarkColors.primary,
             drawerTheme: const DrawerThemeData(
                 backgroundColor: LinkedInDarkColors.primary),
-            scaffoldBackgroundColor: LinkedInDarkColors.primary,
+            scaffoldBackgroundColor: LinkedInDarkColors.scaffoldBackgroundColor,
             appBarTheme:
                 const AppBarTheme(backgroundColor: LinkedInDarkColors.primary),
             iconTheme:

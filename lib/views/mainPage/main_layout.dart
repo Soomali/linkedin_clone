@@ -8,9 +8,28 @@ class MainLayout extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const LinkedInAppBar(),
-        SliverList(delegate: SliverChildBuilderDelegate(((context, index) {
+        // BottomSliverBar(items: [
+        //   BottomSliverBarItem(
+        //       icon: Icon(Icons.home),
+        //       label: 'Ana Sayfa',
+        //       backgroundColor: Colors.red,
+        //       activeIcon: Icon(Icons.home_filled),
+        //       onTap: _setIndex),
+        //   BottomSliverBarItem(
+        //       icon: Icon(Icons.one_k),
+        //       label: 'Ana Sayfa',
+        //       backgroundColor: Colors.blue,
+        //       onTap: _setIndex),
+        //   BottomSliverBarItem(
+        //       icon: Icon(Icons.notifications),
+        //       label: 'Ana Sayfa',
+        //       backgroundColor: Colors.blue,
+        //       onTap: _setIndex),
+        // ], selectedIndex: _selectedIndex),
+        SliverList(
+            delegate: SliverChildBuilderDelegate(((context, index) {
           return Text('$index');
-        })))
+        }), childCount: 100)),
       ],
     );
   }
