@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_clone/colors/linked_in_dark_colors.dart';
 
 part 'drawer_item.dart';
 part 'news.dart';
@@ -15,20 +16,26 @@ class CustomDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          ProfileArea(),
-          if (!isPremiumUser) TryPremium(),
-          News(),
-          DrawerItem(
+          const ProfileArea(),
+          if (!isPremiumUser) const TryPremium(),
+          const News(),
+          const DrawerItem(
             text: 'Gruplar',
           ),
-          DrawerItem(
+          const DrawerItem(
             text: 'Etkinlikler',
           ),
-          DrawerItemExtension(),
-          DrawerItem(
+          DrawerItemExtension(
+            icon: Icon(
+              Icons.add,
+              color: Theme.of(context).iconTheme.color,
+              size: MediaQuery.of(context).size.width * 0.05,
+            ),
+          ),
+          const DrawerItem(
             text: 'Takip edilen hashtagler',
           ),
-          DrawerItem(
+          const DrawerItem(
             text: 'Daha fazla keşfet',
           )
         ],
