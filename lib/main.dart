@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_clone/colors/linked_in_dark_colors.dart';
 import 'package:flutter_app_clone/views/mainPage/main_page.dart';
 
 void main() {
@@ -15,11 +16,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-            primaryColor: Color.fromRGBO(49, 51, 53, 1),
-            scaffoldBackgroundColor: Colors.brown.shade800,
+            textTheme: const TextTheme(
+                headline6:
+                    TextStyle(color: LinkedInDarkColors.headline6TextColor),
+                subtitle1: TextStyle(color: Colors.blue)),
+            primaryColor: LinkedInDarkColors.primary,
+            drawerTheme: const DrawerThemeData(
+                backgroundColor: LinkedInDarkColors.primary),
+            scaffoldBackgroundColor: LinkedInDarkColors.primary,
             appBarTheme:
-                AppBarTheme(backgroundColor: Color.fromRGBO(49, 51, 53, 1)),
-            iconTheme: IconThemeData(color: Colors.white70)),
+                const AppBarTheme(backgroundColor: LinkedInDarkColors.primary),
+            iconTheme:
+                const IconThemeData(color: LinkedInDarkColors.iconColor)),
         debugShowCheckedModeBanner: false,
         home: MainPage());
   }

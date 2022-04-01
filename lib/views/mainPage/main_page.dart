@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../drawer/custom_drawer.dart';
+
 part 'app_bar.dart';
 part 'search_bar.dart';
 part 'main_layout.dart';
@@ -11,9 +13,9 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: MainLayout(),
-      drawer: Drawer(),
+      drawer: CustomDrawer(),
     );
   }
 }
