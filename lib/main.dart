@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_clone/views/mainPage/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-            primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.red),
+            primaryColor: Color.fromRGBO(49, 51, 53, 1),
+            scaffoldBackgroundColor: Colors.brown.shade800,
+            appBarTheme:
+                AppBarTheme(backgroundColor: Color.fromRGBO(49, 51, 53, 1)),
+            iconTheme: IconThemeData(color: Colors.white70)),
         debugShowCheckedModeBanner: false,
-        home: Center(child: Text('LinkedIn Github exampleeeee')));
+        home: MainPage());
   }
 }
