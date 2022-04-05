@@ -5,7 +5,6 @@ class PostOptions extends StatelessWidget {
   static const EdgeInsets iconButtonPadding = EdgeInsets.fromLTRB(0, 4, 0, 4);
   @override
   Widget build(BuildContext context) {
-    final emptyFunction = () {};
     return IconTheme(
       data: Theme.of(context).iconTheme.copyWith(size: 16),
       child: DefaultTextStyle(
