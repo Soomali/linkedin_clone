@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../data/data.dart';
 import '../drawer/custom_drawer.dart';
 import '../appBar/app_bar.dart';
+import '../post/post.dart';
 
 part 'main_layout.dart';
 
@@ -17,7 +19,9 @@ class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
   int _selectedIndex = 0;
   final _pages = [
-    MainLayout(),
+    PostPage(
+      posts: List.generate(30, (index) => Post.random()),
+    ),
     MainLayout(),
     MainLayout(),
     MainLayout(),
