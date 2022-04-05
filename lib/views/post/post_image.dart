@@ -5,6 +5,13 @@ class PostImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final size = MediaQuery.of(context).size;
+    return Container(
+      height: size.height * 0.4,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              fit: BoxFit.fill,
+              image: NetworkImage(PostHolder.of(context)!.post.photoUrl!))),
+    );
   }
 }

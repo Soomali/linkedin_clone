@@ -1,6 +1,6 @@
 part of 'data.dart';
 
-final _caption = '''
+final _randoCaption = '''
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum non mi ut consectetur. Maecenas aliquet lorem sapien, in aliquam leo interdum non. Nulla non ex accumsan, blandit dolor ac, semper massa. Cras egestas diam vitae ornare laoreet. Vestibulum euismod quam consectetur lobortis gravida. Ut vel mollis nulla. Aliquam erat volutpat. Duis tristique eleifend dolor porta pharetra. Phasellus luctus neque vel lacus feugiat laoreet. Pellentesque congue vulputate ultrices. Aliquam lectus lectus, sollicitudin ut iaculis sed, facilisis id dui. Praesent vitae nibh porttitor, rutrum lacus et, blandit leo. Praesent bibendum malesuada mattis. Fusce pharetra ante eget vulputate iaculis. Vivamus dignissim varius egestas. Vestibulum pharetra ex at nulla sodales, sed ullamcorper metus ornare.
 
 Ut porttitor id nisl a tempor. Nunc sed nisi a eros accumsan consequat vitae ut quam. Nullam faucibus convallis libero, vel auctor est condimentum sit amet. Pellentesque eleifend lorem a mi convallis, non vestibulum diam tempor. Donec et tincidunt massa, non vulputate orci. Mauris malesuada nulla eget tempus faucibus. Duis dictum purus non varius sodales. Phasellus blandit, augue quis fermentum efficitur, est odio posuere ipsum, id sagittis purus erat ullamcorper sapien. Mauris urna mi, auctor sit amet tortor vel, tempus mattis ante. Cras at lacus posuere, bibendum sem non, blandit velit. Quisque convallis sed dolor quis pulvinar. Praesent placerat sem vestibulum quam ornare lacinia. Suspendisse sed iaculis ipsum, nec condimentum mi. Suspendisse faucibus diam sed volutpat elementum. Phasellus nec auctor neque.
@@ -17,7 +17,7 @@ class Post {
   final List<User> reactedNetwork;
   final User poster;
   final DateTime postDate;
-  final String caption;
+  final String _caption;
   final String? photoUrl;
   final List<Reaction> reactions;
   final int reactionCount;
@@ -28,19 +28,28 @@ class Post {
       {required this.reactedNetwork,
       required this.poster,
       required this.postDate,
-      required this.caption,
+      required String caption,
       this.photoUrl,
       required this.reactions,
       required this.reactionCount,
       required this.commentCount,
-      required this.sharedCount});
+      required this.sharedCount})
+      : _caption = caption;
+
+  String get fullCaption => _caption;
+
+  String get caption {
+    return _caption.length > 125
+        ? _caption.substring(0, 122).padRight(3, '.')
+        : _caption;
+  }
 
   factory Post.random() {
     final postDate =
         DateTime.now().subtract(Duration(days: _random.nextInt(20) + 1));
     return Post(
         reactedNetwork: List.generate(
-          _random.nextInt(3) + 1,
+          _random.nextInt(3),
           (index) => User.random(),
         ),
         poster: User.random(),
@@ -53,6 +62,6 @@ class Post {
         commentCount: _random.nextInt(50) + 1,
         sharedCount: _random.nextInt(10) + 1,
         reactionCount: _random.nextInt(48) + 6,
-        caption: _caption.substring(0, _random.nextInt(540) + 21));
+        caption: _randoCaption.substring(0, _random.nextInt(540) + 21));
   }
 }

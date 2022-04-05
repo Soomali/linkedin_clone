@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
+            colorScheme: ColorScheme.dark(
+              secondary: Colors.white,
+            ),
             textTheme: const TextTheme(
                 headline6:
                     TextStyle(color: LinkedInDarkColors.headline6TextColor),
