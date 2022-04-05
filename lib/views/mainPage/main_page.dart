@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app_clone/views/notification/notification_page.dart';
 
 import '../../data/data.dart';
 import '../drawer/custom_drawer.dart';
@@ -24,7 +25,7 @@ class _MainPageState extends State<MainPage>
     ),
     MainLayout(),
     MainLayout(),
-    MainLayout(),
+    NotificationPage(),
     MainLayout()
   ];
   @override
