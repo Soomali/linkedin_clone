@@ -4,6 +4,7 @@ enum ReactionType { like, congrats, help, love, information, hmm }
 
 class Reaction {
   final ReactionType reaction;
+
   final User user;
   Reaction({required this.user, required this.reaction});
   factory Reaction.random() {
